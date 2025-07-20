@@ -1,7 +1,7 @@
-  soclify-admin:
+  scl-admin:
     image: airlance/vite-react-vue:dev
     volumes:
-      - ./projects/soclify-admin:/app
+      - ./projects/scl-admin:/app
     restart: {{ services_restart_policy }}
     environment:
       PORT: 4007
@@ -9,4 +9,4 @@
     ports:
       - 5012:4007
     depends_on:
-      - soclify-api
+      - scl-api

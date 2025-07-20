@@ -1,13 +1,13 @@
-  soclify-api:
+  scl-api:
     image: airlance/go:dev
     volumes:
-      - ./projects/soclify-api:/app
+      - ./projects/scl-api:/app
     restart: {{ services_restart_policy }}
     environment:
-      DATABASE_URL: postgres://postgres:postgres@soclify-postgres:5432/mydb?sslmode=disable
+      DATABASE_URL: postgres://postgres:postgres@scl-postgres:5432/mydb?sslmode=disable
       PORT: 8080
       DOMAINS: api.vsn.localhost
     ports:
       - 5880:8080
     depends_on:
-      - soclify-postgres
+      - scl-postgres

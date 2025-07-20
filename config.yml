@@ -25,17 +25,17 @@ services_restart_policy: always
 
 projects:
   # EM-core-API
-  - name: soclify-api
+  - name: scl-api
     src: git@github.com:soclify/api.git
-  - name: soclify-admin
+  - name: scl-admin
     src: git@github.com:soclify/admin.git
 
 # List services that enabled in current local environment
 enabled_services:
   # storages
-  - soclify-postgres
+  - scl-postgres
 
   # projects
   # TODO: add your projects here
-  - soclify-api
-  - soclify-admin
+  - scl-api
+  - scl-admin
