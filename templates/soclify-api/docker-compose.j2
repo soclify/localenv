@@ -5,7 +5,7 @@
     restart: {{ services_restart_policy }}
     environment:
       DATABASE_URL: postgres://postgres:postgres@soclify-postgres:5432/mydb?sslmode=disable
-      GOTRUE_DB_DRIVER: postgres
+      PORT: 8080
       DOMAINS: api.vsn.localhost
     ports:
       - 5880:8080

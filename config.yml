@@ -27,6 +27,8 @@ projects:
   # EM-core-API
   - name: soclify-api
     src: git@github.com:soclify/api.git
+  - name: soclify-admin
+    src: git@github.com:soclify/admin.git
 
 # List services that enabled in current local environment
 enabled_services:
@@ -36,4 +38,4 @@ enabled_services:
   # projects
   # TODO: add your projects here
   - soclify-api
-
+  - soclify-admin

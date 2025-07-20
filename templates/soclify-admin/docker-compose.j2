@@ -1,0 +1,12 @@
+  soclify-admin:
+    image: airlance/vite-react-vue:dev
+    volumes:
+      - ./projects/soclify-admin:/app
+    restart: {{ services_restart_policy }}
+    environment:
+      PORT: 4007
+      DOMAINS: admin.vsn.localhost
+    ports:
+      - 5012:4007
+    depends_on:
+      - soclify-api
