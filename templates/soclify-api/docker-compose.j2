@@ -1,0 +1,13 @@
+  soclify-api:
+    image: airlance/go:dev
+    volumes:
+      - ./projects/soclify-api:/app
+    restart: {{ services_restart_policy }}
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@soclify-postgres:5432/mydb?sslmode=disable
+      GOTRUE_DB_DRIVER: postgres
+      DOMAINS: api.vsn.localhost
+    ports:
+      - 5880:8080
+    depends_on:
+      - soclify-postgres
